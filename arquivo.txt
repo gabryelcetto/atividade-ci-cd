@@ -1,0 +1,76 @@
+1. O que é um workflow?
+É um conjunto de tarefas automatizadas executadas para realizar um processo.
+
+2. Qual é sua finalidade?
+Automatizar tarefas, como compilar, testar e publicar aplicações.
+
+3. Quando um workflow é executado?
+Quando ocorre um evento configurado ou quando é iniciado manualmente.
+
+4. Onde ele é configurado no GitHub/GitLab?
+
+GitHub: arquivos YAML na pasta .github/workflows/.
+
+GitLab: arquivo .gitlab-ci.yml na raiz do projeto.
+
+5. O que são eventos em um pipeline?
+São ações que podem iniciar a execução de um workflow ou pipeline.
+
+6. Quais eventos podem iniciar uma execução?
+Push, pull request, merge request, agendamento ou execução manual.
+
+7. Qual a diferença entre executar um pipeline após um push e após um pull request?
+
+Push: executa quando alterações são enviadas ao repositório.
+
+Pull Request: executa para verificar alterações propostas antes de serem integradas ao código principal.
+
+8. O que é um Job?
+É um conjunto de etapas ou comandos que realizam uma tarefa específica no pipeline.
+
+9. Um workflow pode possuir vários Jobs?
+Sim. Um workflow pode ter vários Jobs para executar tarefas diferentes.
+
+10. Os Jobs podem depender uns dos outros?
+Sim. É possível definir dependências para controlar a ordem de execução.
+
+11. Por que dividir um pipeline em diferentes Jobs?
+Para organizar tarefas, facilitar a manutenção e permitir execuções paralelas quando possível.
+
+12. Pesquise o conceito de Stages/etapas em pipelines.
+São fases que organizam o pipeline em uma sequência lógica, como Build, Test e Deploy.
+
+13. Como poderia ser estruturado um pipeline contendo Build → Test → Deploy?
+
+Build: compila o código e prepara a aplicação.
+
+Test: executa testes para verificar se tudo funciona corretamente.
+
+Deploy: publica a aplicação em um ambiente de destino, se as etapas anteriores forem concluídas com sucesso.
+
+14. O que é um Runner?
+É um agente ou ambiente responsável por executar os Jobs de um pipeline.
+
+15. Qual é a função dele?
+Disponibilizar os recursos necessários para executar os comandos e tarefas automatizadas.
+
+16. Quem executa os comandos definidos no pipeline?
+O Runner executa os comandos definidos na configuração do pipeline.
+
+17. Qual a diferença entre um runner hospedado pelo serviço e um runner próprio/self-hosted?
+
+Hospedado: é gerenciado pelo GitHub ou GitLab.
+
+Self-hosted: é instalado e administrado pelo próprio usuário ou organização.
+
+18. O que é YAML?
+É um formato de texto utilizado para organizar dados e configurações de maneira estruturada.
+
+19. Por que ele é utilizado na configuração de pipelines?
+Porque permite definir tarefas, eventos, Jobs e etapas de forma legível e organizada.
+
+20. Qual a importância da indentação?
+Ela define a hierarquia dos elementos e mostra quais configurações pertencem a cada seção.
+
+21. O que pode acontecer se a estrutura YAML estiver incorreta?
+O pipeline pode apresentar erros de sintaxe, falhar na validação ou não executar como esperado.
